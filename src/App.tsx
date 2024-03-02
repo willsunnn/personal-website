@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 import { AboutMePage } from './page/AboutMePage'
 import { LandingPage } from './page/LandingPage'
@@ -11,33 +11,39 @@ import { Footer } from './components/Footer'
 const App = () => {
   return (
     <Routes>
-      <Route element={
-        <div className="App">
+      <Route path="/" element={
+        <div className="w-full">
           <Header/>
           <Outlet/>
           <Footer/>
         </div>
-      }/>
+      }>
+        <Route path="AboutMe" element={(
+          <AboutMePage/>
+        )}/>
 
-      <Route path="AboutMe" element={(
-        <AboutMePage/>
-      )}/>
+        <Route path="WorkExperience" element={(
+          <WorkExperiencePage/>
+        )}/>
 
-      <Route path="WorkExperience" element={(
-        <WorkExperiencePage/>
-      )}/>
+        <Route path="Projects" element={(
+          <ProjectsPage/>
+        )}/>
 
-      <Route path="Projects" element={(
-        <ProjectsPage/>
-      )}/>
+        <Route path="Resume" element={(
+          <ResumePage/>
+        )}/>
 
-      <Route path="Resume" element={(
-        <ResumePage/>
-      )}/>
+        <Route path="Landing" element={(
+          <LandingPage/>
+        )}/>
 
-      <Route path="*" element={(
-        <LandingPage/>
-      )}/>
+        {/* If there was no path, redirect to the landing page */}
+        <Route path="" element={
+          <Navigate to='/Landing'/>
+        }/>
+      </Route>
+
     </Routes>
   )
 }
