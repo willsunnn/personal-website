@@ -1,21 +1,15 @@
 import React from 'react'
 import './App.css'
+import { Button, Text, Flex } from '@radix-ui/themes'
 
 function App () {
   return (
     <div className="App">
       <header className="App-header">
-        <p className="text-3xl font-bold underline text-red-600">
-        Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Flex direction="column" gap="2">
+          <Text>Hello from Radix Themes :</Text>
+          <Button>Lets go</Button>
+        </Flex>
       </header>
     </div>
   )
