@@ -10,38 +10,37 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={
-        <div className="w-screen h-screen bg-">
-          <div className="w-screen h-20 p-2 fixed top-0 left-0">
-            <Header/>
+        <div className="w-screen h-screen">
+          <div className="w-screen h-20 p-2 fixed top-0 left-0 z-50">
+            <Header />
           </div>
 
-          {/* Temporary while there is no content */}
-          <div className="w-screen h-[2000px] px-2 mt-20 overflow-scroll">
-            <Outlet/>
-            <Footer/>
+          <div className="w-screen px-2 mt-20 overflow-scroll border">
+            <Outlet />
+            <Footer />
           </div>
         </div>
       }>
         <Route path="about" element={(
-          <AboutMePage/>
-        )}/>
+          <AboutMePage />
+        )} />
 
         <Route path="experience" element={(
-          <WorkExperiencePage/>
-        )}/>
+          <WorkExperiencePage />
+        )} />
 
         <Route path="projects" element={(
-          <ProjectsPage/>
-        )}/>
+          <ProjectsPage />
+        )} />
 
         <Route path="resume" element={(
-          <ResumePage/>
-        )}/>
+          <ResumePage />
+        )} />
 
         {/* If there was no path, redirect to the landing page */}
         <Route path="" element={
-          <Navigate to='/about'/>
-        }/>
+          <Navigate to='/about' />
+        } />
       </Route>
 
     </Routes>
