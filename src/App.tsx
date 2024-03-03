@@ -1,7 +1,6 @@
 import { Outlet, Route, Routes, Navigate } from 'react-router-dom'
 import { ResumePage } from './pages/Resume'
 import { Header } from './components/header/Header'
-import { Footer } from './components/Footer'
 import { HomePage } from './pages/home/HomePage'
 
 const App = () => {
@@ -16,10 +15,6 @@ const App = () => {
           <div className="flex-1">
             <Outlet />
           </div>
-
-          <footer>
-            <Footer />
-          </footer>
         </div>
       }>
         <Route path="home" element={(

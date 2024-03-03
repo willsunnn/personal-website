@@ -1,34 +1,6 @@
-import { IoMdMail, IoLogoLinkedin, IoLogoGithub } from "react-icons/io"
 import { ExpandableNavItem } from "./NavItem"
 import { Avatar, AvatarFallback, AvatarImage } from "@/shadui/components/ui/avatar"
-import { HashLink } from "react-router-hash-link"
-
-type ContactMethodProps = { link: string, icon: React.ReactNode, value: string }
-
-const ContactMethod = (props: ContactMethodProps) => {
-    return <HashLink to={props.link} target="_blank" className="flex items-center gap-1" key={props.link}>
-        {props.icon}
-        <div className="text-sm font-medium leading-none">{props.value}</div>
-    </HashLink>
-}
-
-const contacts: ContactMethodProps[] = [
-    {
-        link: "mailto:sunwilliam@gmail.com",
-        icon: (<IoMdMail className="mt-[3px]" />),
-        value: "sunwilliam@gmail.com"
-    },
-    {
-        link: "https://linkedin.com/in/willsunnn",
-        icon: (<IoLogoLinkedin className="mt-[3px]" />),
-        value: "willsunnn"
-    },
-    {
-        link: "https://github.com/willsunnn",
-        icon: (<IoLogoGithub className="mt-[3px]" />),
-        value: "willsunnn"
-    },
-]
+import { CONTACT_LIST, ContactMethod } from "@/components/ContactMethod"
 
 export const ContactNavItem = () => {
     return <ExpandableNavItem title="Contact">
@@ -39,7 +11,7 @@ export const ContactNavItem = () => {
             </Avatar>
             <div className="flex flex-col gap-0.5">
                 {
-                    contacts.map(ContactMethod)
+                    CONTACT_LIST.map(ContactMethod)
                 }
             </div>
         </div>
