@@ -5,7 +5,8 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './components/ThemeProvider.tsx'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(<>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   <React.StrictMode>
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <BrowserRouter>
@@ -13,4 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
+</>
 )
