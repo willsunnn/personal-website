@@ -3,22 +3,25 @@ import { AboutMePage } from './page/AboutMePage'
 import { ProjectsPage } from './page/ProjectsPage'
 import { ResumePage } from './page/Resume'
 import { WorkExperiencePage } from './page/WorkExperience'
-import { Header } from './components/Header'
+import { Header } from './components/header/Header'
 import { Footer } from './components/Footer'
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={
-        <div className="w-screen h-screen">
-          <div className="w-screen h-20 p-2 fixed top-0 left-0 z-50">
+        <div className="relative flex min-h-screen flex-col bg-background">
+          <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <Header />
+          </header>
+
+          <div className="flex-1">
+            <Outlet />
           </div>
 
-          <div className="w-screen px-2 mt-20 overflow-scroll border">
-            <Outlet />
+          <footer>
             <Footer />
-          </div>
+          </footer>
         </div>
       }>
         <Route path="about" element={(
