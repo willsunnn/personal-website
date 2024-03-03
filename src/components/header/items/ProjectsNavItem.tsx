@@ -12,8 +12,8 @@ const projects: { title: string; href: string; description: string, newTab: bool
     },
     {
         title: "Don't Worry Mom",
-        href: "/projects/dont-worry-mom",
-        newTab: false,
+        href: "https://github.com/DontWorryMom",
+        newTab: true,
         description:
             "Fall detection application using an embedded IOT system",
     },
@@ -53,7 +53,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
 
 export const ProjectsNavItem = () => {
     return <ExpandableNavItem title="Projects" to="/projects">
-        <ul className="grid grid-cols-2 content-evenly justify-items-center w-[576px] h-56">
+        <ul className="grid grid-cols-2 content-evenly justify-items-center w-[576px] h-56 bg-background/95">
             {projects.map((project) => (
                 <ProjectItemPreview
                     key={project.title}

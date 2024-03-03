@@ -1,8 +1,8 @@
 import { Outlet, Route, Routes, Navigate } from 'react-router-dom'
-import { AboutMePage } from './page/AboutMePage'
-import { ProjectsPage } from './page/ProjectsPage'
-import { ResumePage } from './page/Resume'
-import { WorkExperiencePage } from './page/WorkExperience'
+import { AboutMePage } from './pages/about/AboutMePage'
+import { ProjectsPage } from './pages/ProjectsPage'
+import { ResumePage } from './pages/Resume'
+import { WorkExperiencePage } from './pages/WorkExperience'
 import { Header } from './components/header/Header'
 import { Footer } from './components/Footer'
 
