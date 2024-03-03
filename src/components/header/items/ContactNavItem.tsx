@@ -1,17 +1,15 @@
 import { IoMdMail, IoLogoLinkedin, IoLogoGithub } from "react-icons/io"
 import { ExpandableNavItem } from "./NavItem"
 import { Avatar, AvatarFallback, AvatarImage } from "@/shadui/components/ui/avatar"
-import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 
 type ContactMethodProps = { link: string, icon: React.ReactNode, value: string }
 
 const ContactMethod = (props: ContactMethodProps) => {
-    return (<>
-        <Link to={props.link} target="_blank" className="flex items-center gap-1">
-            {props.icon}
-            <div className="text-sm font-medium leading-none">{props.value}</div>
-        </Link>
-    </>)
+    return <HashLink to={props.link} target="_blank" className="flex items-center gap-1" key={props.link}>
+        {props.icon}
+        <div className="text-sm font-medium leading-none">{props.value}</div>
+    </HashLink>
 }
 
 const contacts: ContactMethodProps[] = [

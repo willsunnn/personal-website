@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, LinkProps } from "react-router-dom"
+import { LinkProps } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import { ExpandableNavItem } from "./NavItem"
 import { HomePageTags } from "@/pages/home/HomePage";
 
@@ -38,7 +39,7 @@ type ProjectItemPreviewProps = React.PropsWithChildren<{ title: string } & LinkP
 const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
     return (
         <li>
-            <Link
+            <HashLink
                 to={props.to}
                 target={props.target}
                 className="block w-64 h-20 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -47,7 +48,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
                 <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                     {props.children}
                 </p>
-            </Link>
+            </HashLink>
         </li>
     )
 }
