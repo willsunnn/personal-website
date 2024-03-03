@@ -18,7 +18,7 @@ const OptionalLink = (props: OptionalLinkProps) => {
 type SimpleNavItemProps = { title: React.ReactNode, to?: string, openLinkInNewTab?: boolean }
 
 export const SimpleNavItem = (props: SimpleNavItemProps) => {
-    return <OptionalLink to={props.to} target={(props.openLinkInNewTab) ? "_blank" : ""} >
+    return <OptionalLink to={props.to} target={(props.openLinkInNewTab) ? "_blank" : undefined} >
         <div className={buttonVariants({ variant: "link" })}>{props.title}</div>
     </OptionalLink>
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, LinkProps } from "react-router-dom"
 import { ExpandableNavItem } from "./NavItem"
+import { HomePageTags } from "@/pages/home/HomePage";
 
 const projects: { title: string; href: string; description: string, newTab: boolean }[] = [
     {
@@ -52,7 +53,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
 }
 
 export const ProjectsNavItem = () => {
-    return <ExpandableNavItem title="Projects" to="/projects">
+    return <ExpandableNavItem title="Projects" to={`/home#${HomePageTags.PROJECTS}`}>
         <ul className="grid grid-cols-2 content-evenly justify-items-center w-[576px] h-56 bg-transparent">
             {projects.map((project) => (
                 <ProjectItemPreview

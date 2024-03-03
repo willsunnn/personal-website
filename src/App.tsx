@@ -1,10 +1,8 @@
 import { Outlet, Route, Routes, Navigate } from 'react-router-dom'
-import { AboutMePage } from './pages/about/AboutMePage'
-import { ProjectsPage } from './pages/ProjectsPage'
 import { ResumePage } from './pages/Resume'
-import { WorkExperiencePage } from './pages/WorkExperience'
 import { Header } from './components/header/Header'
 import { Footer } from './components/Footer'
+import { HomePage } from './pages/home/HomePage'
 
 const App = () => {
   return (
@@ -24,16 +22,8 @@ const App = () => {
           </footer>
         </div>
       }>
-        <Route path="about" element={(
-          <AboutMePage />
-        )} />
-
-        <Route path="experience" element={(
-          <WorkExperiencePage />
-        )} />
-
-        <Route path="projects" element={(
-          <ProjectsPage />
+        <Route path="home" element={(
+          <HomePage />
         )} />
 
         <Route path="resume" element={(
@@ -42,7 +32,7 @@ const App = () => {
 
         {/* If there was no path, redirect to the landing page */}
         <Route path="" element={
-          <Navigate to='/about' />
+          <Navigate to='/home' />
         } />
       </Route>
 
