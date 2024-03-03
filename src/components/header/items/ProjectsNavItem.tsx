@@ -42,7 +42,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
             <HashLink
                 to={props.to}
                 target={props.target}
-                className="block w-64 h-20 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                className="block w-64 h-20 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-accent-foreground focus:bg-primary/20 focus:text-accent-foreground"
             >
                 <div className="text-sm font-medium leading-none">{props.title}</div>
                 <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
