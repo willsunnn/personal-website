@@ -1,5 +1,6 @@
-import { Button } from "@/shadui/components/ui/button"
-import { NavigationMenuContent, NavigationMenuItem, NavigationMenuTrigger } from "@/shadui/components/ui/navigation-menu"
+import { buttonVariants } from "@/shadui/components/ui/button"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/shadui/components/ui/hover-card"
+
 import { Link } from "react-router-dom"
 
 type OptionalLinkProps = React.PropsWithChildren<{ to?: string, target?: string }>
@@ -17,11 +18,9 @@ const OptionalLink = (props: OptionalLinkProps) => {
 type SimpleNavItemProps = { title: React.ReactNode, to?: string, openLinkInNewTab?: boolean }
 
 export const SimpleNavItem = (props: SimpleNavItemProps) => {
-    return <NavigationMenuItem>
-        <OptionalLink to={props.to} target={(props.openLinkInNewTab) ? "_blank" : ""} >
-            <Button variant="link">{props.title}</Button>
-        </OptionalLink>
-    </NavigationMenuItem>
+    return <OptionalLink to={props.to} target={(props.openLinkInNewTab) ? "_blank" : ""} >
+        <div className={buttonVariants({ variant: "link" })}>{props.title}</div>
+    </OptionalLink>
 }
 
 
@@ -29,15 +28,15 @@ type ExpandableNavItemProps = React.PropsWithChildren<SimpleNavItemProps>
 
 export const ExpandableNavItem = (props: ExpandableNavItemProps) => {
     return (
-        <NavigationMenuItem>
-            <NavigationMenuTrigger>
+        <HoverCard openDelay={50} closeDelay={100}>
+            <HoverCardTrigger>
                 <OptionalLink to={props.to} target={(props.openLinkInNewTab) ? "_blank" : ""} >
-                    <Button variant="link">{props.title}</Button>
+                    <div className={buttonVariants({ variant: "link" })}>{props.title}</div>
                 </OptionalLink>
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="w-fit p-2">
+            </HoverCardTrigger>
+            <HoverCardContent className="w-fit p-2 m-4">
                 {props.children}
-            </NavigationMenuContent>
-        </NavigationMenuItem>
+            </HoverCardContent>
+        </HoverCard>
     )
 }
