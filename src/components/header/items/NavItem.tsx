@@ -34,7 +34,7 @@ export const ExpandableNavItem = (props: ExpandableNavItemProps) => {
                     <div className={buttonVariants({ variant: "link" })}>{props.title}</div>
                 </OptionalLink>
             </HoverCardTrigger>
-            <HoverCardContent className="w-fit p-2 m-4">
+            <HoverCardContent className="w-fit p-2 m-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-none">
                 {props.children}
             </HoverCardContent>
         </HoverCard>

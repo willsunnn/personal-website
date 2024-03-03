@@ -40,7 +40,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
             <Link
                 to={props.to}
                 target={props.target}
-                className="block w-64 h-20 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                className="block w-64 h-20 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
             >
                 <div className="text-sm font-medium leading-none">{props.title}</div>
                 <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -53,7 +53,7 @@ const ProjectItemPreview = (props: ProjectItemPreviewProps) => {
 
 export const ProjectsNavItem = () => {
     return <ExpandableNavItem title="Projects" to="/projects">
-        <ul className="grid grid-cols-2 content-evenly justify-items-center w-[576px] h-56 bg-background/95">
+        <ul className="grid grid-cols-2 content-evenly justify-items-center w-[576px] h-56 bg-transparent">
             {projects.map((project) => (
                 <ProjectItemPreview
                     key={project.title}
