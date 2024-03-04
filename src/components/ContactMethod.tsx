@@ -27,3 +27,11 @@ export const ContactMethod = (props: ContactMethodProps) => {
         <div className="text-sm font-medium leading-none">{props.value}</div>
     </HashLink>
 }
+
+export const ContactList = () => {
+    return <div className="flex flex-col gap-0.5">
+        {
+            CONTACT_LIST.map(ContactMethod)
+        }
+    </div>
+}

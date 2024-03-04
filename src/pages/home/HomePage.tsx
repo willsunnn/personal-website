@@ -13,9 +13,9 @@ export enum HomePageTags {
 export const HomePage = () => {
   return (
     <div className="h-[2000px] flex flex-col -mt-[100px]">
-      <a className="px-16 bg-[#8bb6a2] pt-64 pb-32" id={HomePageTags.ABOUT}>
+      <div className="px-16 bg-[#8bb6a2] pt-64 pb-32" id={HomePageTags.ABOUT}>
         <AboutMeContent />
-      </a>
+      </div>
 
       {/* Transition between backgrounds */}
       <div className="bg-[#8bb6a2] h-[200px] w-full">
@@ -24,9 +24,9 @@ export const HomePage = () => {
         </svg>
       </div>
 
-      <a className="px-16 bg-[#8ba4b6] pt-64 pb-64" id={HomePageTags.WORK_EXPERIENCE}>
+      <div className="px-16 bg-[#8ba4b6] pt-64 pb-64" id={HomePageTags.WORK_EXPERIENCE}>
         <WorkExperienceContent />
-      </a>
+      </div>
 
       {/* Transition between backgrounds */}
       <div className="bg-[#8ba4b6] h-[200px] w-full">
@@ -35,14 +35,14 @@ export const HomePage = () => {
         </svg>
       </div>
 
-      <a className="px-16 bg-[#b2adcc] pt-32 pb-64" id={HomePageTags.PROJECTS}>
+      <div className="px-16 bg-[#b2adcc] pt-32 pb-64" id={HomePageTags.PROJECTS}>
         <ProjectsContent />
-      </a>
+      </div>
       <div className="bg-[#b2adcc] h-[200px] w-full" />
 
-      <a className="w-full bg-[#b2adcc]" id={HomePageTags.FOOTER}>
+      <div className="w-full bg-[#b2adcc]" id={HomePageTags.FOOTER}>
         <Footer />
-      </a>
+      </div>
     </div>
   )
 }

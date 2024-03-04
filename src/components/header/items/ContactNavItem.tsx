@@ -1,6 +1,6 @@
 import { ExpandableNavItem } from "./NavItem"
 import { Avatar, AvatarFallback, AvatarImage } from "@/shadui/components/ui/avatar"
-import { CONTACT_LIST, ContactMethod } from "@/components/ContactMethod"
+import { ContactList } from "@/components/ContactMethod"
 
 export const ContactNavItem = () => {
     return <ExpandableNavItem title="Contact">
@@ -9,11 +9,7 @@ export const ContactNavItem = () => {
                 <AvatarImage src="/profile_picture.JPEG" alt="@shadcn" />
                 <AvatarFallback>WS</AvatarFallback>
             </Avatar>
-            <div className="flex flex-col gap-0.5">
-                {
-                    CONTACT_LIST.map(ContactMethod)
-                }
-            </div>
+            <ContactList />
         </div>
     </ExpandableNavItem>
 }

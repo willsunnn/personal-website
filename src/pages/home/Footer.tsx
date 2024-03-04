@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/shadui/components/ui/avatar"
-import { CONTACT_LIST, ContactMethod } from "../../components/ContactMethod"
+import { ContactList } from "../../components/ContactMethod"
 import { Separator } from "@/shadui/components/ui/separator"
 
 export const Footer = () => {
@@ -19,12 +19,8 @@ export const Footer = () => {
         <AvatarImage src="/profile_picture.JPEG" alt="@shadcn" />
         <AvatarFallback>WS</AvatarFallback>
       </Avatar>
-      <div className="flex flex-col gap-0.5">
-        {
-          CONTACT_LIST.map(ContactMethod)
-        }
-      </div>
+      <ContactList />
       <div className="flex-1" />
     </div>
-  </div>
+  </div >
 }
