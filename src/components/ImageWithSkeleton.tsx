@@ -15,14 +15,12 @@ export const ImageWithSkeleton = (props: ImageWithSkeletonProps) => {
     const skeletonVisibility = (loaded) ? "hidden" : ""
 
     const onLoad = () => {
-        console.log(`setting loaded for ${props.src}`)
         setLoaded(true)
         if (props.onLoad) {
             props.onLoad()
         }
     }
 
-    console.log(`rendering ${props.src} with loaded value of ${[loaded, imgVisibility, skeletonVisibility]}`)
     return (<>
         <img className={cn(props.className, imgVisibility)} src={props.src} onLoad={onLoad} />
         <Skeleton className={cn(props.className, skeletonVisibility, "opacity-60")} />

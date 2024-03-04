@@ -1,6 +1,5 @@
 
-import React from "react"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/shadui/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem } from "@/shadui/components/ui/carousel"
 import { cn } from "@/shadui/lib/utils"
 import Autoplay from "embla-carousel-autoplay"
 import { ImageWithSkeleton } from "./ImageWithSkeleton"
