@@ -116,8 +116,8 @@ export const AboutMeContent = () => {
     <div className="flex flex-col space-y-16 content-center">
       <div className="w-2/3 max-w-[900px] min-w-[600px] self-center flex flex-col gap-6">
         <h1 className="text-4xl font-semibold">About Me</h1>
-        <p>I'm a backend software engineer, with some personal experience working on frontend</p>
-        <p>My backend experience includes designing and implementing REST APIs and GraphQL APIs, as well as designing Microservices in an event-driven architecture</p>
+        <p>I'm a backend software engineer, with some personal experience working on frontend. I also have project based experience working on embedded software.</p>
+        <p>My backend experience includes designing and implementing REST APIs and GraphQL APIs, as well as designing Microservices in an event-driven architecture. I am most used to Spring Boot and Java, though I have familiarity with other stacks such as Python Flask, or Express and TypeScript. </p>
       </div>
 
       {/* Skills Section */}
