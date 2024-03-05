@@ -12,10 +12,8 @@ const workExperience: BulletedItem[] = [
       },
     ],
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "Maintained and enhanced Spring Kotlin microservices that communicated with multiple healthcare providers using the HL7v2 standard",
+      "Implemented a microservice that interfaced with Kafka and Oracle’s Autonomous Database to back a GraphQL API",
     ]
   },
   {
