@@ -1,6 +1,5 @@
 import { cn } from "@/shadui/lib/utils"
 import { HiExternalLink } from "react-icons/hi"
-import { OptionalLink } from "./OptionalLink"
 import { Link } from "react-router-dom"
 
 export type StartConnector = "connect" | "no_connect"
@@ -50,13 +49,13 @@ export const BulletedItem = (props: BulletedItemProps) => {
             <div className="flex flex-col pt-0 pb-16 w-full">
 
                 {/* The name & location of the position */}
-                <div className="flex flex-row">
+                <div className="flex flex-row items-center">
                     <Link to={props.link} target={"_blank"} className="hover:underline flex flex-row gap-1 items-center">
-                        <h2 className="text-lg font-semibold">{props.name}</h2>
-                        <HiExternalLink className="-mt-1" />
+                        <h2 className="text-lg font-bold">{props.name}</h2>
+                        <HiExternalLink />
                     </Link>
                     <div className="flex-1" />
-                    <div>{props.location}</div>
+                    <div className="text-sm">{props.location}</div>
                 </div>
 
                 {/* The titles of each position */}
@@ -64,8 +63,8 @@ export const BulletedItem = (props: BulletedItemProps) => {
                     {
                         props.titles.map((title) => {
                             return (
-                                <div className="flex flex-row">
-                                    <div className="flex-1 text-sm font-semibold">{title.title}</div>
+                                <div className="flex flex-row items-center">
+                                    <div className="flex-1 text-base font-semibold">{title.title}</div>
                                     <div className="text-sm">{title.range}</div>
                                 </div>)
                         })

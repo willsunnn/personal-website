@@ -24,7 +24,7 @@ export const HomePage = () => {
         </svg>
       </div>
 
-      <div className="px-16 bg-[#8ba4b6] pb-64" id={HomePageTags.WORK_EXPERIENCE}>
+      <div className="px-16 bg-[#8ba4b6] pb-24" id={HomePageTags.WORK_EXPERIENCE}>
         <WorkExperienceContent />
       </div>
 
