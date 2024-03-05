@@ -14,7 +14,7 @@ const projects: { title: string; href: string; description: string, newTab: bool
     },
     {
         title: "Don't Worry Mom",
-        href: "https://github.com/DontWorryMom",
+        href: "https://github.com/DontWorryMom/DontWorryMom-Backend",
         newTab: true,
         description:
             "Fall detection application using an embedded IOT system",
