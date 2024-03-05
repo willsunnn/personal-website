@@ -55,7 +55,7 @@ const skills: Skill[] = [
     link: "https://redis.io/",
   },
   {
-    name: "Elasitcsearch",
+    name: "Elasticsearch",
     icon: (<SimpleIcons.SiElasticsearch className="w-full h-full" />),
     link: "https://www.elastic.co/elasticsearch",
   },
