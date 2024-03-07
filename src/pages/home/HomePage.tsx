@@ -12,7 +12,7 @@ export enum HomePageTags {
 
 export const HomePage = () => {
   return (
-    <div className="h-[2000px] flex flex-col -mt-[100px]">
+    <div className="h-full flex flex-col -mt-[100px]">
       <div className="px-16 bg-[#8bb6a2] pt-64 pb-32" id={HomePageTags.ABOUT}>
         <AboutMeContent />
       </div>
